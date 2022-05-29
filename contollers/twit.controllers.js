@@ -28,12 +28,5 @@ module.exports.twitControllers = {
     Twit.findByIdAndUpdate(req.params.id, {
       $push: { likes: req.body.likes },
     }).then((data) => res.json(data));
-  },
-  addComment: (req, res) => {
-    Twit.findByIdAndUpdate(req.params.id, {
-      $push: { comments: req.body.comments },
-    })
-      .then((data) => res.json(data))
-      .catch((e) => res.json(e));
-  },
+  }
 };

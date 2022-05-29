@@ -6,10 +6,6 @@ const twitSchema = mongoose.Schema({
     likes: [{
         ref: 'User',
         type: mongoose.SchemaTypes.ObjectId
-    }],
-    comments: [{
-        ref: 'User',
-        type: mongoose.SchemaTypes.String
     }]
 })
 
